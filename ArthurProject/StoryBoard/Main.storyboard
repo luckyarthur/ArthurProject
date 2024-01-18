@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="fAS-eP-nHL">
+            <objects>
+                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0uq-Vj-XeQ" customClass="CollectionViewController" customModule="ArthurProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yzd-Gq-nGm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="fhk-HA-kIB" customClass="CollectionViewLayout" customModule="ArthurProject" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="yps-re-cN2" customClass="CollectionViewCell" customModule="ArthurProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="103" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6vU-Dy-NrT">
+                                    <rect key="frame" x="0.0" y="0.0" width="103" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-H6-zNU">
+                                            <rect key="frame" x="8" y="16" width="87" height="87"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TIX-8H-MLd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="50"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbl-YD-liu">
+                                                    <rect key="frame" x="0.0" y="50" width="87" height="37"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="S6j-H6-zNU" firstAttribute="top" secondItem="6vU-Dy-NrT" secondAttribute="top" constant="16" id="5AP-bI-7jc"/>
+                                        <constraint firstAttribute="trailing" secondItem="S6j-H6-zNU" secondAttribute="trailing" constant="8" id="9UG-yM-deh"/>
+                                        <constraint firstItem="S6j-H6-zNU" firstAttribute="leading" secondItem="6vU-Dy-NrT" secondAttribute="leading" constant="8" id="hWT-z7-WTH"/>
+                                        <constraint firstAttribute="bottom" secondItem="S6j-H6-zNU" secondAttribute="bottom" constant="16" id="pdH-6r-QXD"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" name="rw-green"/>
+                                <size key="customSize" width="103" height="119"/>
+                                <connections>
+                                    <outlet property="imageView" destination="TIX-8H-MLd" id="uOT-Ls-ahf"/>
+                                    <outlet property="label" destination="zbl-YD-liu" id="nqa-Jg-qB1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0uq-Vj-XeQ" id="a61-Yw-SP9"/>
+                            <outlet property="delegate" destination="0uq-Vj-XeQ" id="SDY-5F-B41"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="ndm-5T-7K9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gjR-CE-T7Q">
+                            <connections>
+                                <action selector="cancelBarButtonDidTouchUpInside:" destination="0uq-Vj-XeQ" id="8aR-bI-cvf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uW-DR-XrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4717.6000000000004" y="875.71214392803608"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="rw-green">
+            <color red="0.0" green="0.40784313725490196" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
