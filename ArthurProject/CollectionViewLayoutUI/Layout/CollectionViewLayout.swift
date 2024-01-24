@@ -16,7 +16,10 @@ final class CollectionViewLayout: UICollectionViewLayout {
   weak var delegate: CollectionViewLayoutDelegate?
   
   private var columns: Int {
-    return UIDevice.current.orientation == .portrait ? 1 : 2
+      guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+          return 1
+      }
+    return windowScene.interfaceOrientation == .portrait ? 1 : 2
   }
   
   private var contentBounds: CGRect {

@@ -23,10 +23,11 @@ final class DependencyContainer {
         return tabbarVC
     }
     
-    func collectionViewControllerFactory() -> CollectionViewController {
+    func collectionViewControllerFactory() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CollectionViewController")
-        return vc as! CollectionViewController
+        let navVC = UINavigationController(rootViewController: vc)
+        return navVC
     }
     
     func messageViewControllerFactory() -> MessagesTableViewController {
