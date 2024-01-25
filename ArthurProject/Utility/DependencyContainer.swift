@@ -40,5 +40,21 @@ final class DependencyContainer {
         let vc = UIHostingController(rootView: SwiftUIView())
         return vc
     }
+    
+    func splitViewControllerFactory() -> UIViewController {
+        let splitVC = UISplitViewController(style: .doubleColumn)
+//        let profileVC = profileViewControllerFactory()
+//        profileVC.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width*0.8, height: UIScreen.main.bounds.size.height)
+//        let collectionVC = collectionViewControllerFactory()
+//        splitVC.viewControllers = [profileVC, collectionVC]
+//        splitVC.viewControllers = [collectionVC, profileVC]
+
+//        splitVC.preferredDisplayMode = .oneBesideSecondary
+//        splitVC.maximumPrimaryColumnWidth = 300
+//        splitVC.minimumPrimaryColumnWidth = 150
+//        splitVC.preferredSplitBehavior = .tile
+//        
+        return splitVC
+    }
 }
 
