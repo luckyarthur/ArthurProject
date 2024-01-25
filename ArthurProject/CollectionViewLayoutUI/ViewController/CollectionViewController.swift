@@ -43,8 +43,13 @@ final class CollectionViewController: UICollectionViewController {
     
     // MARK: - ConfigUI
     private func setupNavigationBar() {
-        let leftNavItem = UIBarButtonItem(title: "Rotate", style: .plain, target: self, action: #selector(triggerRotate))
-        navigationItem.rightBarButtonItem = leftNavItem
+        let rightNavItem = UIBarButtonItem(title: "Rotate", style: .plain, target: self, action: #selector(triggerRotate))
+        navigationItem.rightBarButtonItem = rightNavItem
+        let leftNavItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showProfileViewController))
+        navigationItem.leftBarButtonItem = leftNavItem
+        
+        guard let navVC = navigationController else { return }
+        navVC.delegate = self
     }
     
     // MARK: - Flow Layout
@@ -63,6 +68,11 @@ final class CollectionViewController: UICollectionViewController {
 
         windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: desiredOrientation))
         
+    }
+    
+    @objc private func showProfileViewController() {
+        let profileVC = DependencyContainer.shared.profileViewControllerFactory()
+        navigationController?.pushViewController(profileVC, animated: true)
     }
     
     @IBAction func cancelBarButtonDidTouchUpInside(_ sender: UIBarButtonItem) {
@@ -98,5 +108,12 @@ extension CollectionViewController: CollectionViewLayoutDelegate {
     
     func collectionView(_ collectionView: UICollectionView, labelTextAtIndexPath indexPath: IndexPath) -> String {
         return shapes[indexPath.item].shapeName
+    }
+}
+
+extension CollectionViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animator = NavigationAnimator(operation: operation)
+        return animator
     }
 }

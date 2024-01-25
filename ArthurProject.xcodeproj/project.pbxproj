@@ -27,6 +27,7 @@
 		60C84CC82B56129B001523A4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C84CC72B56129B001523A4 /* Message.swift */; };
 		60C84CCB2B561430001523A4 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C84CCA2B561430001523A4 /* MessageViewModel.swift */; };
 		60E64FA92B57CDD30051409F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E64FA82B57CDD30051409F /* SwiftUIView.swift */; };
+		60F046BE2B6241E3001F8E4F /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F046BD2B6241E3001F8E4F /* TransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		60C84CC72B56129B001523A4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		60C84CCA2B561430001523A4 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		60E64FA82B57CDD30051409F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		60F046BD2B6241E3001F8E4F /* TransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		60C84C942B54E226001523A4 /* CollectionViewLayoutUI */ = {
 			isa = PBXGroup;
 			children = (
+				60F046BC2B6241BB001F8E4F /* Animator */,
 				60C84C952B54E226001523A4 /* ViewModel */,
 				60C84C972B54E226001523A4 /* Layout */,
 				60C84C992B54E226001523A4 /* model */,
@@ -229,6 +232,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		60F046BC2B6241BB001F8E4F /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				60F046BD2B6241E3001F8E4F /* TransitionAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,6 +322,7 @@
 				60C84CA32B54E226001523A4 /* CollectionViewController.swift in Sources */,
 				60C84C7F2B54E178001523A4 /* AppDelegate.swift in Sources */,
 				60C84C812B54E178001523A4 /* SceneDelegate.swift in Sources */,
+				60F046BE2B6241E3001F8E4F /* TransitionAnimator.swift in Sources */,
 				60C84CC02B55631E001523A4 /* MessagesTableViewController.swift in Sources */,
 				60C84CA72B54E24D001523A4 /* DependencyContainer.swift in Sources */,
 				60C84CA02B54E226001523A4 /* CollectionViewLayout.swift in Sources */,
