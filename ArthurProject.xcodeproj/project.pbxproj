@@ -26,7 +26,7 @@
 		60C84CC62B561253001523A4 /* LeftMessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C84CC32B561253001523A4 /* LeftMessageBubbleTableViewCell.swift */; };
 		60C84CC82B56129B001523A4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C84CC72B56129B001523A4 /* Message.swift */; };
 		60C84CCB2B561430001523A4 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C84CCA2B561430001523A4 /* MessageViewModel.swift */; };
-		60E64FA92B57CDD30051409F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E64FA82B57CDD30051409F /* SwiftUIView.swift */; };
+		60E64FA92B57CDD30051409F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E64FA82B57CDD30051409F /* ProfileView.swift */; };
 		60F046BE2B6241E3001F8E4F /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F046BD2B6241E3001F8E4F /* TransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +52,7 @@
 		60C84CC32B561253001523A4 /* LeftMessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		60C84CC72B56129B001523A4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		60C84CCA2B561430001523A4 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
-		60E64FA82B57CDD30051409F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		60E64FA82B57CDD30051409F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		60F046BD2B6241E3001F8E4F /* TransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,7 +227,7 @@
 		60E64FA72B57CDAB0051409F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				60E64FA82B57CDD30051409F /* SwiftUIView.swift */,
+				60E64FA82B57CDD30051409F /* ProfileView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 			files = (
 				60C84C9F2B54E226001523A4 /* CollectionViewModel.swift in Sources */,
 				60C84CA12B54E226001523A4 /* Shape.swift in Sources */,
-				60E64FA92B57CDD30051409F /* SwiftUIView.swift in Sources */,
+				60E64FA92B57CDD30051409F /* ProfileView.swift in Sources */,
 				60C84CCB2B561430001523A4 /* MessageViewModel.swift in Sources */,
 				60C84CA82B54E24D001523A4 /* Binder.swift in Sources */,
 				60C84CC42B561253001523A4 /* MessageBubbleTableViewCell.swift in Sources */,

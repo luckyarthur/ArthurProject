@@ -37,7 +37,8 @@ final class DependencyContainer {
     }
     
     func profileViewControllerFactory() -> UIViewController {
-        let vc = UIHostingController(rootView: SwiftUIView())
+        let vc = UIHostingController(rootView: ProfileView())
+        vc.hidesBottomBarWhenPushed = true
         return vc
     }
     

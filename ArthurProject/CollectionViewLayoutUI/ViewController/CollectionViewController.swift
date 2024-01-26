@@ -45,7 +45,8 @@ final class CollectionViewController: UICollectionViewController {
     private func setupNavigationBar() {
         let rightNavItem = UIBarButtonItem(title: "Rotate", style: .plain, target: self, action: #selector(triggerRotate))
         navigationItem.rightBarButtonItem = rightNavItem
-        let leftNavItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(showProfileViewController))
+        let leftNavItem = UIBarButtonItem(image: UIImage(named: "profile-tab"), style: .done, target: self, action: #selector(showProfileViewController))
+
         navigationItem.leftBarButtonItem = leftNavItem
         
         guard let navVC = navigationController else { return }
